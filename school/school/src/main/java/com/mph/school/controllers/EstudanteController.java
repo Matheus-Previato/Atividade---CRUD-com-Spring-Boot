@@ -26,4 +26,9 @@ public class EstudanteController {
     public Estudante buscarPorId(@PathVariable Long id) {
         return estudanteService.buscarPorId(id);
     }
+
+    @DeleteMapping("/{id}")
+    public void deletarEstudante(@PathVariable Long id) {
+        estudanteService.deletarEstudante(id);
+    }
 }

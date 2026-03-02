@@ -16,4 +16,14 @@ public class EstudanteController {
     public Estudante criarEstudante(@RequestBody Estudante estudante) {
         return estudanteService.criarEstudante(estudante);
     }
+
+    @GetMapping
+    public List<Estudante> buscarTodos() {
+        return estudanteService.buscarTodos();
+    }
+
+    @GetMapping("/{id}")
+    public Estudante buscarPorId(@PathVariable Long id) {
+        return estudanteService.buscarPorId(id);
+    }
 }
